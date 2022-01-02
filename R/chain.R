@@ -1,6 +1,6 @@
 #' Chain
 #' 
-#' chain (julia)
+#' chain (as in https://github.com/jkrumbiegel/Chain.jl)
 #'
 #' @param x an object (e.g data frame)
 #' @param expr an expression
@@ -13,6 +13,9 @@
   se <- substitute(expr)
   le <- length(se)
   fu <- function(...) {}
+  if(is.name(se)){
+    return(eval(call(deparse(se), x)))
+  }
   start <- if(se[[1]] == as.name("{")) 2 else 1
   if(le > 1) for(iii in start:le){
     fg <- all.names(se[[iii]])
