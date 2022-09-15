@@ -1,6 +1,6 @@
 #' Chain
 #' 
-#' chain (as in https://github.com/jkrumbiegel/Chain.jl)
+#' chain (mimicks https://github.com/jkrumbiegel/Chain.jl)
 #'
 #' @param x an object (e.g data frame)
 #' @param expr an expression
